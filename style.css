@@ -1,0 +1,128 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+/* Variables */
+
+:root {
+    --color-arylide-yellow: #DFCC74;
+    --color-black: #000000;
+    --color-celadon-green: #218380;
+    --color-eggplant: #75485E;
+    --color-gray: #CCCCCC;
+    --color-persian-orange: #CB904D;
+    --color-platinum: #E9E3E6;
+    --color-white: #FFFFFF;
+}
+
+/* Reset */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Core Styles */
+
+html, 
+body {
+    background-color: var(--color-gray);
+    font-family: 'Nunito Sans',sans-serif;
+}
+
+#navbar ul {
+    list-style-type: none;
+}
+
+#navbar ul li {
+    color: var(--color-black);
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+}
+
+#navbar ul li a {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+/* Hide Nested Menus */
+
+#navbar ul li ul {
+    display:none;
+}
+
+#navbar ul li:hover {
+    background-color: var(--color-eggplant);
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#navbar ul li:hover a {
+    color: #FFFFFF;
+}
+
+/* Show Nested Menu */
+
+#navbar ul li:hover ul {
+    display: block;
+    left: 0;
+    margin-top: 1rem;
+    position: absolute;
+    width: 200px;
+}
+
+#navbar ul li:hover ul li {
+    background: var(--color-eggplant);
+    display: block;
+}
+
+#navbar ul li:hover ul li a {
+    color: var(--color-platinum);
+}
+
+#navbar ul li:hover ul li:hover {
+    background-color: var(--color-eggplant);
+    color: inherit;
+}
+
+#navbar ul li:hover ul li span {
+    background-color: var(--color-eggplant);
+    border-radius: 5px;
+    color: var(--color-platinum);
+    float: right;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+}
+
+#navbar ul li:hover ul li:hover span {
+    background-color: var(--color-persian-orange);
+}
+
+#showcase {
+    align-items: center;
+    background-color: var(--color-arylide-yellow);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    padding: 0px 2rem;
+    text-align: center;
+}
+
+#showcase h1 {
+    color: var(--color-celadon-green);
+    font-size: 4rem;
+}
+
+@media(max-width: 600px) {
+    #navbar ul li {
+        display: block;
+    }
+    #navbar ul li:hover ul {
+        position: relative;
+        width: 100%;
+    }
+}
